@@ -1,5 +1,5 @@
-<header class="py-4 bg-black">
-    <h1 class="text-danger text-center">
+<header class="py-4">
+    <h1>
         Laravel Model Controller
     </h1>
 </header>

@@ -9,33 +9,36 @@
         @foreach($movies as $movie)
             <div class="col p-2">
 
-                <div class="card h-100 bg-black text-danger text-center p-3">
+                <div class="my_card card h-100 p-3">
 
                     <h2>
                         {{$movie->title}}
                     </h2>
 
-                    @if("{{$movie->title}}" != "{{$movie->original_title}}")
+                    <div class="details">
+
+                        @if("{{$movie->title}}" != "{{$movie->original_title}}")
+                            <h3>
+                                Original Title: <span>{{$movie->original_title}}</span>
+                            </h3>
+                        @endif
+    
                         <h3>
-                            Original Title: {{$movie->original_title}}
+                            Nationality: <span>{{$movie->nationality}}</span>
                         </h3>
-                    @endif
-
-                    <h4>
-                        Nationality: {{$movie->nationality}}
-                    </h4>
-
-                    <h4>
-                        Release: {{$movie->date}}
-                    </h4>
-
-                    <h4>
-                        Average vote: {{$movie->vote}}
-                    </h4>
+    
+                        <h3>
+                            Release: <span>{{$movie->date}}</span>
+                        </h3>
+    
+                        <h3>
+                            Average vote: <span>{{$movie->vote}}</span>
+                        </h3>
+                    </div>
                 </div>
             </div>
         @endforeach
-        </div>
+    </div>
 
 </main>
 
